@@ -1,0 +1,37 @@
+<div class="calendar-body" cdkDropListGroup>
+  @for (weekday of weekdays; track weekday) {
+    <div
+      [ngClass]="getWeekdayClass(weekday)"
+    >{{weekday}}</div>
+  }
+  @for (day of days; track day){
+  <div
+    class="day"
+    matRipple
+    cdkDropList
+    [cdkDropListData]="getAppointmentsForDay(day)"
+    (cdkDropListDropped)="drop($event, day)"
+    [ngClass]="getBgClass(day)"
+    (click)="handleClickDay(day)"
+    (keydown.enter)="handleClickDay(day)"
+    (keydown.space)="handleClickDay(day)"
+    tabindex="0"
+  >
+    <div class="day-header">{{ day | date : "MM/dd" }}</div>
+    @for (appointment of getAppointmentsForDay(day); track (appointment.date +
+    appointment.title)){
+    <div
+      class="appointment"
+      cdkDrag
+      (click)="updateAppointment(appointment, $event)"
+      (keydown.enter)="updateAppointment(appointment, $event)"
+      (keydown.space)="updateAppointment(appointment, $event)"
+      tabindex="0"
+          
+    >
+      {{ appointment.title }}
+    </div>
+    }
+  </div>
+  }
+</div>

@@ -1,0 +1,25 @@
+.calendar-header {
+  height: 70px;
+  align-items: center;
+  margin: auto;
+  font-size: 30px;
+}
+.header-body {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 90px;
+  padding-top: 200px;
+  justify-content: space-between;
+}
+.today-button {
+  background-color: aquamarine;
+}
+.new-button {
+  background-color: rgb(119, 255, 237);
+  margin-left: auto;
+}
+.arrow-icon {
+  margin: 10px;
+  background-color: beige;
+}

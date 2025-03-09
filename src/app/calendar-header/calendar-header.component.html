@@ -1,0 +1,13 @@
+<div class="calendar-header">
+  <div class="header-body">
+    <button mat-button class="today-button" (click)="moveToday()">TODAY</button>
+    <button class="icon arrow-icon" mat-icon-button color="secondary"  (click)="goToPrevious()">
+      <mat-icon color="primary" class="mat-icon-large">arrow_left</mat-icon>
+    </button>
+    <button class="arrow-icon" mat-icon-button color="secondary"  (click)="goToNext()">
+      <mat-icon color="primary" class="mat-icon-large">arrow_right</mat-icon>
+    </button>
+    <span>{{ currentView | date : "MMMM YYYY" }}</span>
+    <button mat-button class="new-button" (click)="createAppointment()">NEW Appointment</button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.calendar-body {
+  padding: 50px;
+}
+.bg-normal {
+  background-color: rgba(222, 222, 252, 0.452);
+}
+.bg-disabled {
+  background-color: rgb(243, 243, 243);
+}
+.bg-highlight {
+  background-color: rgb(94, 238, 143)
+}
+
+.day {
+  border: 1px solid #ddd;
+  padding: 8px;
+  min-height: 100px;
+  border-radius: 10px;
+}
+.week-day {
+  color: black;
+  font-size: medium;
+  display: flex;
+  justify-content: center;
+} 
+.week-sunday {
+  color: red;
+}
